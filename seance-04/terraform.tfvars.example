@@ -1,0 +1,5 @@
+minio_root_user     = "admin"
+minio_root_password = "changeme"
+minio_api_port      = 9010
+minio_console_port  = 9011
+container_name      = "anfa-minio-tf"
