@@ -41,6 +41,7 @@ def construire_message_notification(resume: dict) -> str:
     """Construit le message de notification à partir du résumé de vérification."""
     return (
         f"Pipeline Anfa terminé avec succès : "
-        f"{resume['nb_fichiers']} fichier(s), "
+        # f"{resume['nb_fichiers']} fichier(s), "
+        f"{resume['nb_fichiers']} erreur_volontaire"
         f"{resume['taille_totale_ko']} Ko au total."
     )
