@@ -1,13 +1,14 @@
 # Rendu — Séance 8
 
-**Nom et prénom :** <Votre nom complet>
-**Identifiant GitHub :** <votre-username>
-**Date de soumission :** <JJ/MM/AAAA>
+**Nom et prénom :** OUMAROU BILLY N.
+
+**Identifiant GitHub :** Billy-Crawford
+
+**Date de soumission :** 07/07/2026
 
 ## Résumé de la séance
 
-<2-4 lignes : logique métier séparée et testée, pipeline CI/CD GitHub Actions
-écrit, démonstration d'un test bloquant le déploiement.>
+Lors de cette séance, nous avons professionnalisé notre pipeline de données en extrayant la logique métier du DAG Airflow pour la rendre testable. Nous avons mis en place un workflow GitHub Actions automatisant la qualité du code (lint) et la validation par tests unitaires (pytest), permettant de garantir la fiabilité du déploiement à chaque modification.
 
 ## Étapes principales
 
@@ -26,9 +27,12 @@
 
 ## Réflexion personnelle
 
-<3-5 lignes : en quoi ce pipeline aurait-il empêché l'incident de Mawuli
-(situation-problème du CM) ? Qu'est-ce que `needs:` change concrètement ?>
+Ce pipeline aurait empêché l'incident de Mawuli en stoppant immédiatement la mise en production dès la détection de l'erreur dans la logique de calcul par les tests unitaires automatisés. La directive needs: valider-dag est cruciale ici : elle établit une dépendance stricte, garantissant que le job de déploiement ne s'exécute jamais si les tests ne sont pas passés avec succès (statut vert), protégeant ainsi l'environnement de production contre les régressions.
 
 ## Difficultés rencontrées
 
-<Aucune | Décrivez brièvement.>
+Configuration initiale du workflow : Le dossier .github/workflows devait être impérativement à la racine du dépôt pour être détecté par GitHub Actions.
+
+Environnement local : Nécessité d'installer les dépendances du fichier requirements.txt dans le .venv pour permettre l'exécution correcte de pytest en local.
+
+
