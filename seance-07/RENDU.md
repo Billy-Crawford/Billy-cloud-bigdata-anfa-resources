@@ -110,7 +110,7 @@ Les résultats sont enregistrés automatiquement dans le bucket prévu à cet ef
 
 ## 1. Cluster Kafka avec 3 brokers actifs
 
-![Kafka UI](captures/kafka-ui-3-brokers.png)
+![alt text](captures/brokers-kafka-ui.png)
 
 Cette capture montre le cluster Kafka fonctionnant avec ses trois brokers disponibles.
 
@@ -118,7 +118,7 @@ Cette capture montre le cluster Kafka fonctionnant avec ses trois brokers dispon
 
 ## 2. Débit des messages
 
-![Débit Kafka](captures/kafka-throughput.png)
+![alt text](captures/message-kafka.png)
 
 Le débit des messages augmente progressivement à mesure que les positions GPS sont envoyées par les producteurs.
 
@@ -126,7 +126,7 @@ Le débit des messages augmente progressivement à mesure que les positions GPS 
 
 ## 3. Test de tolérance aux pannes
 
-![Deux brokers actifs](captures/kafka-2-brokers.png)
+![alt text](captures/resilience-kafka.png)
 
 Cette capture montre le cluster après l'arrêt volontaire du broker **anfa-kafka-2**.
 
@@ -136,7 +136,7 @@ Le cluster continue néanmoins de traiter les données grâce à la réplication
 
 ## 4. Exécution de Spark Structured Streaming
 
-![Spark Streaming](captures/spark-console-stream.png)
+![alt text](captures/micro-batchs.png)
 
 Les micro-batchs générés par Spark Structured Streaming sont affichés en temps réel dans la console.
 
@@ -144,17 +144,10 @@ Les micro-batchs générés par Spark Structured Streaming sont affichés en tem
 
 ## 5. Résultats enregistrés dans MinIO
 
-![Résultats MinIO](captures/minio-stream-results.png)
+![alt text](captures/2e_job.png)
 
 Les données agrégées sont correctement enregistrées dans le Data Lake MinIO.
 
----
-
-# Réponses aux exercices d'application
-
-*(À compléter avec les réponses aux exercices demandés durant la séance.)*
-
----
 
 # Difficultés rencontrées
 
